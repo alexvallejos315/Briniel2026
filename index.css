@@ -1,0 +1,29 @@
+.sun-icon {
+  --ray-color: #2ec7c9;
+  --face-color: #000;
+  --glasses-color: #000;
+  --shine-color: #2ec7c9;
+}
+
+.sun-icon .rays {
+  transform-origin: 50% 50%;
+  animation: spin 6s linear infinite;
+}
+
+.sun-icon .ray {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.sun-icon .ray:nth-child(odd) {
+  animation-delay: 0.75s;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}

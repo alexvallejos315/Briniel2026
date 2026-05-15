@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor Eterno ❤️</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: radial-gradient(circle, #4a0e2e 0%, #240b36 40%, #000000 100%);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            overflow: hidden; 
+            margin: 0;
+        }
+
+        /* --- CONTENEDOR 3D --- */
+        .scence {
+            width: 100%;
+            height: 60vh;
+            perspective: 2000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .carousel-3d {
+            width: 220px;
+            height: 320px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate-carousel 25s linear infinite;
+            cursor: pointer;
+        }
+
+        @keyframes rotate-carousel {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        .carousel-item-3d {
+            position: absolute;
+            width: 220px;
+            height: 320px;
+            border: 2px solid rgba(255, 192, 203, 0.6);
+            border-radius: 15px;
+            overflow: hidden;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,0.3));
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.4);
+            background: #000;
+        }
+
+        .carousel-item-3d img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* Posicionamiento de las 10 fotos */
+        .item-1  { transform: rotateY(0deg) translateZ(450px); }
+        .item-2  { transform: rotateY(36deg) translateZ(450px); }
+        .item-3  { transform: rotateY(72deg) translateZ(450px); }
+        .item-4  { transform: rotateY(108deg) translateZ(450px); }
+        .item-5  { transform: rotateY(144deg) translateZ(450px); }
+        .item-6  { transform: rotateY(180deg) translateZ(450px); }
+        .item-7  { transform: rotateY(216deg) translateZ(450px); }
+        .item-8  { transform: rotateY(252deg) translateZ(450px); }
+        .item-9  { transform: rotateY(288deg) translateZ(450px); }
+        .item-10 { transform: rotateY(324deg) translateZ(450px); }
+
+        .title-love {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: #ff4d8d;
+            text-align: center;
+            padding-top: 20px;
+            text-shadow: 0 0 25px rgba(255, 77, 141, 0.8);
+            position: relative;
+            z-index: 20;
+        }
+
+        /* --- ESTILOS DEL MODAL MEJORADOS (TAMAÑO Y CALIDAD) --- */
+        .modal-xl {
+            max-width: 90vw; /* El modal ocupará el 90% del ancho de la pantalla */
+        }
+
+        .modal-content {
+            background-color: rgba(20, 5, 30, 0.9); /* Fondo oscuro translúcido */
+            border: 2px solid #ff4d8d;
+            border-radius: 20px;
+            backdrop-filter: blur(10px); /* Efecto de desenfoque detrás del modal */
+        }
+
+        .modal-body {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #modalImage {
+            max-width: 100%;
+            max-height: 80vh; /* La imagen no superará el 80% de la altura de la pantalla */
+            object-fit: contain; /* Mantiene la proporción y calidad original */
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+
+        .btn-close-love {
+            background-color: #ff4d8d;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-close-love:hover {
+            background-color: #ff0040;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff4d8d;
+        }
+
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <h1 class="title-love">Nuestra Historia Creciente Día a Día mi Briggite ❤️✨</h1>
+    <h1 class="title-love" style="font-size: 3rem;">DyB</h1>
+
+    <div class="scence">
+        <div class="carousel-3d">
+            <div class="carousel-item-3d item-1"><img src="./Img/1.png" class="clickable-img"></div>
+            <div class="carousel-item-3d item-2"><img src="./Img/2.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-3"><img src="./Img/3.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-4"><img src="./Img/4.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-5"><img src="./Img/5.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-6"><img src="./Img/6.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-7"><img src="./Img/7.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-8"><img src="./Img/8.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-9"><img src="./Img/9.jpeg" class="clickable-img"></div>
+            <div class="carousel-item-3d item-10"><img src="./Img/10.jpeg" class="clickable-img"></div>
+        </div>
+    </div>
+
+    <div class="text-center mt-2" style="position: relative; z-index: 20;">
+        <p class="fs-4 fw-light">Cada estallido de luz me recuerda a tu hermosa sonrisa mi Medusina hermosa <3</p>
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" alt="Recuerdo en alta calidad">
+                    <button type="button" class="btn-close-love" data-bs-dismiss="modal">Cerrar con Amor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            
+            // Lógica del Modal
+            $('.clickable-img').on('click', function() {
+                const imgSrc = $(this).attr('src');
+                $('#modalImage').attr('src', imgSrc);
+                
+                // Detener carrusel
+                $('.carousel-3d').css('animation-play-state', 'paused');
+                
+                var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                myModal.show();
+            });
+
+            $('#imageModal').on('hidden.bs.modal', function () {
+                $('.carousel-3d').css('animation-play-state', 'running');
+            });
+
+            // Fuegos Artificiales
+            function createFirework() {
+                const x = Math.random();
+                const y = Math.random() * 0.5;
+                confetti({
+                    particleCount: 50,
+                    spread: 70,
+                    origin: { x, y },
+                    colors: ['#ff4d8d', '#ffffff', '#ffeb3b'],
+                    startVelocity: 30,
+                    gravity: 0.5
+                });
+                confetti({
+                    particleCount: 10,
+                    scalar: 2,
+                    shapes: ['heart'],
+                    origin: { x, y },
+                    colors: ['#ff4d8d', '#ffffff']
+                });
+            }
+            setInterval(createFirework, 2500);
+
+            // Lluvia de Corazones
+            setInterval(() => {
+                confetti({
+                    particleCount: 1,
+                    angle: 90,
+                    spread: 360,
+                    startVelocity: 0,
+                    ticks: 300,
+                    gravity: 0.2,
+                    origin: { x: Math.random(), y: -0.1 },
+                    shapes: ['heart'],
+                    colors: ['#ff4d8d', '#ff80ab'],
+                    scalar: Math.random() * 1 + 0.5
+                });
+            }, 400);
+
+            // Click General
+            $(document).on('click', function(e) {
+                if (!$(e.target).hasClass('clickable-img') && !$(e.target).closest('.modal-content').length) {
+                    confetti({
+                        particleCount: 60,
+                        spread: 80,
+                        origin: { x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight },
+                        shapes: ['heart'],
+                        colors: ['#ff4d8d', '#ffffff']
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
